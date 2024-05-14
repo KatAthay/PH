@@ -1,0 +1,152 @@
+.three-points-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 0;
+  height: 500px;
+  width: 100%;
+
+  .three-header {
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'Cormorant Garamond';
+    margin-bottom: 0;
+  }
+}
+
+.three-points-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+
+  .main-point-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    margin: 0 5px;
+
+    .blob-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 300px;
+      width: 300px;
+
+      .point-blob {
+        position: relative;
+        z-index: -1;
+        width: 150px;
+        height: 150px;
+        top: 8px;
+        left: 5px;
+      }
+    }
+
+    .points-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 45px;
+      height: auto;
+      width: 350px;
+
+      .point-icon {
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .point-header {
+        text-align: center;
+        font-family: 'Cormorant Garamond';
+        font-weight: 700;
+        font-size: 1.55rem;
+        margin: 3px 0 10px;
+      }
+
+      .point-info {
+        text-align: center;
+        margin: 10px 0;
+        padding: 5px 0;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .three-points-row {
+    .points-container {
+      width: 400px;
+    }
+  }
+}
+
+/* Apply for screens up to 1200px */
+@media only screen and (max-width: 1200px) {
+  .three-points-container {
+    height: 500px;
+
+    .main-point-container {
+      width: 100%;
+
+      .points-container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets and medium desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .three-points-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 5px 0;
+    height: auto;
+    margin-top: 30px;
+
+    .three-header {
+      font-size: 2rem;
+    }
+
+    .three-points-row {
+      flex-direction: column;
+
+      .main-point-container {
+        height: 300px;
+        width: 100%;
+
+        .points-container {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .three-points-container {
+    height: auto;
+
+    .main-point-container {
+      height: 350px;
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .three-points-container {
+    min-height: 400px;
+  }
+}

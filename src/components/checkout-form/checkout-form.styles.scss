@@ -1,0 +1,63 @@
+.checkout-form-container {
+  width: 100%;
+
+  h4 {
+    font-family: 'Cormorant Garamond';
+  }
+
+  .form-check-input:checked[type='checkbox'],
+  .form-check-input:checked {
+    background-color: #3c685d;
+    border-color: #3c685d;
+  }
+
+  .checkout-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .return-cart {
+      display: flex;
+      flex-direction: row;
+
+      width: 100%;
+      cursor: pointer;
+
+      .cartarrow {
+        width: 10px;
+      }
+
+      .return-cart-text {
+        padding: 1px 0 0 2px;
+      }
+    }
+
+    .shipping-btn {
+      margin-top: 7px;
+      width: 100%;
+    }
+  }
+}
+
+// Media queries
+
+// Apply for screens up to 992px
+@media only screen and (max-width: 992px) {
+  .checkout-footer {
+    .return-cart {
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .checkout-footer {
+    flex-direction: column !important;
+
+    .shipping-btn {
+      margin-top: 10px;
+    }
+  }
+}

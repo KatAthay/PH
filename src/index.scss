@@ -1,0 +1,105 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: #3c403f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html {
+  overflow: scroll;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #3c403f;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+
+// Styled Lines
+
+.styled-line {
+  width: 100%;
+  margin: 20px 0;
+  height: 0.06rem;
+  background-image: linear-gradient(
+    90deg,
+    rgb(210, 210, 210) 6%,
+    rgb(185, 185, 185) 50%,
+    rgb(210, 210, 210) 93%
+  );
+}
+
+.styled-line-under {
+  width: 100%;
+  margin: 1px 0 2px;
+  height: 0.06rem;
+  background-image: linear-gradient(
+    90deg,
+    rgb(210, 210, 210) 6%,
+    rgb(185, 185, 185) 50%,
+    rgb(210, 210, 210) 93%
+  );
+}
+.styled-line-thin {
+  width: 100%;
+  margin: 5px 0;
+  height: 0.06rem;
+  background-image: linear-gradient(
+    90deg,
+    rgb(210, 210, 210) 6%,
+    rgb(185, 185, 185) 50%,
+    rgb(210, 210, 210) 93%
+  );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: rgb(78, 134, 120);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(78, 134, 120, 0.6);
+}

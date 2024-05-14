@@ -1,0 +1,280 @@
+.product-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+// product image container left side
+
+.product-img-container {
+  display: flex;
+  width: 50%;
+  padding-top: 20px;
+
+  .product-thumb-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    margin-right: 20px;
+    order: 1;
+
+    .product-thumb-container {
+      width: 165px;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .product-img-col {
+    height: auto;
+    width: 100%;
+    padding: 0 10px 10px;
+    order: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// product information container right side
+
+.product-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 40px;
+  line-height: 1.6;
+}
+
+.product-header {
+  .product-name {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .product-latin {
+    font-family: 'Cormorant Garamond';
+    color: #ce8861;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .product-price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond';
+  }
+}
+
+.product-size-container {
+  padding: 10px 0 10px;
+  font-size: 1.02rem;
+
+  .product-size-subheader {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .product-size-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .product-btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      letter-spacing: 0.5px;
+      padding: 0 10px;
+      width: 130px;
+      margin-right: 10px;
+      font-size: 0.8rem;
+      background-color: #fff;
+      color: #3c403f;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: 1px solid #3c403f;
+      cursor: pointer;
+      border-radius: 6px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #3c403f;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+}
+
+.product-size-description {
+  margin: 20px 0;
+  .size-description {
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+}
+
+.product-icons-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
+  width: 100%;
+
+  .plant-care-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .plant-care-icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 65px;
+      width: 65px;
+      margin-bottom: 8px;
+    }
+
+    .plant-care-icon {
+      width: 100%;
+    }
+  }
+}
+
+.product-subheader {
+  color: #ce8861;
+  font-size: 1.2rem;
+  font-weight: 400px;
+  margin-bottom: 8px;
+}
+
+.product-paragraph {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+// Apply for screens up to 1200px
+@media only screen and (max-width: 1200px) {
+  .product-img-container {
+    flex-direction: column;
+
+    .product-img-col {
+      order: 2;
+    }
+    .product-thumb-col {
+      order: 3;
+      flex-direction: row;
+      width: 50%;
+
+      .product-thumb-container {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// Apply for screens up to 992px
+@media only screen and (max-width: 992px) {
+  .product-icons-row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .plant-care-icons-container {
+      min-width: 150px;
+
+      .plant-care-icon-name {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .product-icons-row {
+    .plant-care-icons-container {
+      min-width: 100px;
+    }
+  }
+}
+
+// Apply for screens up to 768px
+@media only screen and (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+
+    .product-img-container {
+      width: 100%;
+    }
+    .product-info-container {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+// Apply for screens up to 600px
+@media only screen and (max-width: 609px) {
+  .product-icons-row {
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    .plant-care-icons-container {
+      min-width: 200px;
+
+      .plant-care-icon-name {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .product-header {
+    .product-name {
+      font-size: 2.2rem;
+    }
+
+    .product-price {
+      font-size: 1.3rem;
+    }
+  }
+
+  .product-cart-add {
+    display: flex;
+    justify-content: center;
+  }
+  .product-icons-row {
+    display: column;
+    .plant-care-icons-container {
+      width: 100%;
+    }
+  }
+}

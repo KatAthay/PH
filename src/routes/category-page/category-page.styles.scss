@@ -1,0 +1,16 @@
+.category-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond';
+  padding-top: 50px;
+}
+
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+}

@@ -1,0 +1,105 @@
+.shop-container {
+  padding: 80px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .mobile-buttons {
+    display: none; 
+  }
+  
+}
+
+// Media Queries
+@media only screen and (min-width: 1601px) {
+  .shop-container {
+
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+
+}
+
+// Apply for screens up to 1200px
+@media only screen and (max-width: 1200px) {
+  .shop-container {
+    padding: 80px 60px 20px;
+    justify-content: center;
+  }
+}
+
+
+// Apply for screens up to 768px
+@media only screen and (max-width: 768px) {
+  .shop-container {
+    padding: 80px 40px 20px;
+    justify-content: center;
+    
+      .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px; 
+        
+        .mobile-button {
+          margin-bottom: 10px;
+          width: auto;
+          padding: 10px 20px;
+          width: 300px;
+          text-align: center;
+          text-decoration: none;
+          color: #fff;
+          background-color: #3c685db4;
+          border-radius: 5px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+    
+          &:hover {
+            background-color: #2a4a40;
+          }
+        }
+      }
+    }
+  }
+
+
+// Apply for screens up to 600px
+@media only screen and (max-width: 600px) {
+  .shop-container {
+    padding: 80px 20px 20px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .shop-container {
+
+
+    .mobile-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px; 
+      
+      .mobile-button {
+        margin-bottom: 10px;
+        width: auto;
+        padding: 10px 20px;
+        width: 300px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #3c685db4;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #2a4a40;
+        }
+      }
+    }
+  }
+}

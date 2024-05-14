@@ -1,0 +1,75 @@
+.button-container {
+  min-width: 155px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+
+  padding: 0 30px;
+  font-size: 1rem;
+  background-color: #3c403f;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+
+
+
+  &:hover {
+    background-color: #fff;
+    color: #3c403f;
+    border: 1px solid #3c403f;
+  }
+
+  &.google-sign-in {
+    background-color: #497f73;
+    color: #fff;
+
+    &:hover {
+      background-color: #497f73;
+      border: none;
+    }
+  }
+
+  &.checkout {
+    background-color: #ce8861;
+    color: #fff;
+
+    &:hover {
+      background-color: #c1693b;
+      color: #fff;
+      border: 1px solid #ce8861;
+    }
+  }
+
+  &.inverted {
+    background-color: #fff;
+    color: #3c403f;
+    border: 1px solid #3c403f;
+
+    &:hover {
+      background-color: #3c403f;
+      color: #fff;
+      border: none;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1011px) {
+  .button-container {
+    min-width: 145px;
+    margin: 0 5px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .button-container {
+    min-width: 145px;
+
+    margin: 0 5px;
+  }
+}

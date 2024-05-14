@@ -1,0 +1,195 @@
+.checkout-page-container {
+  display: flex;
+  flex-direction: row;
+  padding: 60px 100px 20px;
+  width: 100%;
+}
+
+.checkout-form {
+  padding: 100px 40px 20px;
+  width: 100%;
+  height: 100%;
+  order: 1;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 100px 40px 0px;
+  background-color: #fde8dc;
+  width: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  order: 2;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .checkout-order-summary {
+    font-family: 'Cormorant Garamond';
+  }
+  .checkout-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid darkgrey;
+
+    .header-block {
+      display: flex;
+      margin-right: 20px;
+      text-transform: capitalize;
+      width: 63%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .checkout-items {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100vh;
+  }
+
+  .discount-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    .discount-input {
+      width: 200px;
+    }
+
+    .form-select:focus,
+    .form-control:focus {
+      border-color: rgb(206, 136, 97);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(206, 136, 97, 0.6);
+    }
+
+    .discount-btn {
+      min-width: 100px;
+      width: 120px;
+      height: 45px;
+      letter-spacing: 0.5px;
+      padding: 0 35px 0 35px;
+      font-size: 1rem;
+      background-color: #ce8861;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bolder;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: #c1693b;
+        color: #fff;
+        border: 1px solid #ce8861;
+      }
+    }
+  }
+
+  .subtotal-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+
+    .subtotal-text {
+      font-size: 1.1rem;
+    }
+  }
+
+  .shipping-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .shipping-text {
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+  }
+
+  .total-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 40px;
+
+    .total-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .total {
+      font-size: 1.2rem;
+    }
+
+    .total-text {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Media Queries
+@media only screen and (max-width: 1400px) {
+  .checkout-page-container {
+    padding: 60px 40px 0px;
+
+    .checkout-items {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .checkout-page-container {
+    padding: 60px 40px 20px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .checkout-page-container {
+    flex-direction: column;
+    padding: 60px 0;
+  }
+
+  .checkout-form {
+    padding: 40px 40px 20px;
+  }
+
+  .checkout-container {
+    padding: 40px 40px 20px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .checkout-page-container {
+    flex-direction: column;
+  }
+
+  .checkout-container {
+    .discount-row {
+      .discount-input {
+        width: 150px;
+      }
+    }
+  }
+}

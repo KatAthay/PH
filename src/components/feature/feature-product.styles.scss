@@ -1,0 +1,179 @@
+.feature-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0 50px 50px;
+}
+
+.feature-img-container {
+  display: flex;
+  width: 50%;
+  padding-top: 20px;
+
+  .feature-thumb-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-right: 20px;
+    order: 1;
+
+    .feature-thumb-container {
+      width: 150px;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .feature-img-col {
+    height: auto;
+    width: 100%;
+    padding: 0 10px 10px;
+    order: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+// feature product information container right side
+
+.feature-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 40px;
+  line-height: 1.6;
+}
+
+.feature-plant-header {
+  color: #3c685d;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.feature-header {
+  margin-top: 15px;
+  .feature-name {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .feature-latin {
+    font-family: 'Cormorant Garamond';
+    color: #ce8861;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+  }
+
+  .feature-price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    font-family: 'Cormorant Garamond';
+  }
+}
+
+.feature-size-description {
+  margin-bottom: 8px;
+}
+
+.go-to-product {
+  display: flex;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  .arrow {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+}
+
+// Apply for screens up to 1400px
+@media only screen and (max-width: 1400px) {
+  .feature-container {
+    margin: 0 0px 50px;
+  }
+
+  .feature-img-container {
+    .feature-thumb-col {
+      width: 130px;
+      margin-right: 10px;
+      .feature-thumb-container {
+        width: 130px;
+      }
+    }
+  }
+}
+
+// Apply for screens up to 1200px
+@media only screen and (max-width: 1200px) {
+  .feature-container {
+    .feature-img-container {
+      .feature-thumb-col {
+        width: 100px;
+        margin-right: 15px;
+        .feature-thumb-container {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+// Apply for screens up to 992px
+@media only screen and (max-width: 992px) {
+  .feature-container {
+    .feature-img-container {
+      display: column;
+      width: 100%;
+      padding-right: 10px;
+
+      .feature-thumb-col {
+        display: none;
+      }
+      .feature-image-col {
+        max-width: 350px;
+      }
+    }
+  }
+
+  .feature-info-container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+// Apply for screens up to 768px
+
+@media only screen and (max-width: 768px) {
+  .feature-container {
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 0;
+
+    .feature-img-col {
+      padding: 0 0 10px;
+    }
+  }
+}
+
+// Apply for screens up to 600px
+@media only screen and (max-width: 600px) {
+}

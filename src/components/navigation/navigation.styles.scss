@@ -1,0 +1,145 @@
+.navigation {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  position: fixed;
+  background: #fff;
+  padding: 0 100px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 20;
+}
+.nav-store-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond';
+  font-size: 1.3rem;
+  padding: 10px;
+  color: #3c514e;
+  white-space: nowrap;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: auto;
+
+  .logo-short-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c514e;
+    color: #fff;
+    font-family: 'Cormorant Garamond';
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: 1px 5px 0;
+    margin-right: 5px;
+    border-radius: 6px;
+    width: auto;
+    height: auto;
+  }
+  .logo-text {
+    display: flex;
+    align-items: center;
+    color: #3c514e;
+    font-family: 'Cormorant Garamond';
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: 6px;
+    width: auto;
+    height: 60px;
+    white-space: nowrap;
+  }
+}
+
+.right-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .nav-links {
+    padding: 10px 15px;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #ce8861;
+      font-weight: 500;
+    }
+  }
+}
+
+.cart-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+// Media queries
+@media only screen and (max-width: 666px) {
+  .logo-container {
+    .logo-text {
+      display: none;
+    }
+
+    .logo-short-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3c514e;
+      color: #fff;
+      font-family: 'Cormorant Garamond';
+      font-size: 2rem;
+      font-weight: 300;
+      padding: 1px 5px 0;
+      margin-right: 5px;
+      border-radius: 6px;
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navigation {
+    padding: 0 30px;
+
+    .nav-store-name {
+      font-size: 1.3rem;
+    }
+
+    .cart-icon-container {
+      width: 36px;
+    }
+  }
+
+  .hamburger-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links-container {
+    display: none;
+  }
+}

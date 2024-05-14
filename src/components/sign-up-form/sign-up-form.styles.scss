@@ -1,0 +1,29 @@
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+  h2 {
+    margin: 10px 0;
+  }
+  .password-container {
+    position: relative;
+  }
+  .eye-icon-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    cursor: pointer;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .sign-up-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
